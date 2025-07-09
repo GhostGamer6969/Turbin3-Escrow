@@ -1,3 +1,5 @@
+#[allow(deprecated)]
+#[allow(unexpected_cfgs)]
 pub mod constants;
 pub mod error;
 pub mod instructions;
@@ -14,8 +16,5 @@ declare_id!("DfPpUtyafyGgUHgXcyNMtgvZZUBm8gSYaFagqbox5UW3");
 #[program]
 pub mod escrow {
     use super::*;
-
-    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        initialize::handler(ctx)
-    }
+    
 }
